@@ -1,9 +1,9 @@
-package controller;
+package controller.cacaPalavrasController;
 
-import model.Palavra;
-import model.Tabuleiro;
-import model.Usuario;
-import view.JogoCacaPalavrasView;
+import model.jogoCacaPalavras.Palavra;
+import model.jogoCacaPalavras.Tabuleiro;
+import model.jogoCacaPalavras.Usuario;
+import view.jogoCacaPalavrasView.JogoCacaPalavrasView;
 
 import java.util.List;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package view;
+package view.jogoCacaPalavrasView;
 
 import java.util.Scanner;
 

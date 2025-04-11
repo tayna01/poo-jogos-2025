@@ -1,6 +1,6 @@
-import controller.JogoCacaPalavrasController;
-import model.Usuario;
-import view.JogoCacaPalavrasView;
+import controller.cacaPalavrasController.JogoCacaPalavrasController;
+import model.jogoCacaPalavras.Usuario;
+import view.jogoCacaPalavrasView.JogoCacaPalavrasView;
 
 import java.util.Scanner;
 

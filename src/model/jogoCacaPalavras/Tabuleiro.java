@@ -1,4 +1,4 @@
-package model;
+package model.jogoCacaPalavras;
 
 import java.util.Random;
 
