@@ -6,7 +6,7 @@ public class Tabuleiro {
     private char[][] matriz;
     private int tamanho;
 
-    public Tabuleiro(int tamanho) { // Construtor
+    public Tabuleiro(int tamanho) {
         this.tamanho = tamanho;
         this.matriz = new char[tamanho][tamanho];
         preencherComLetrasAleatorias();
