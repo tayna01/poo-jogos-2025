@@ -31,7 +31,7 @@ public class JogoCacaPalavrasController {
 
         if (view.desejaDica()) {
             view.mostrarMensagem("Dica: começa com '" + palavraEscolhida.getPrimeiraLetra() +
-                    "' e termina com '" + palavraEscolhida.getUltimaLetra() + "'");
+                    "' e termina com '" + palavraEscolhida.getUltimaLetra() + "'.");
         }
 
         String palpite = view.pedirPalpite();
