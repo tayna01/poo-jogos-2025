@@ -1,4 +1,4 @@
-package model;
+package model.jogoCacaPalavras;
 
 public class Palavra {
     private String texto;
