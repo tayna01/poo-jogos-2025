@@ -31,11 +31,11 @@ public class JogoDaDescoberta {
             String palpite = view.solicitarPalpite();
 
             if (palpite.equalsIgnoreCase("sair")) {
-                view.mostrarMensagem("Você desistiu! A palavra era: " + palavra.getTextoOriginal());
+                view.mostrarMensagem("Você desistiu! A palavra era: " + palavra.getTexto());
                 break;
             }
 
-            if (palpite.equalsIgnoreCase(palavra.getTextoOriginal())) {
+            if (palpite.equalsIgnoreCase(palavra.getTexto())) {
                 view.mostrarMensagem("Parabéns! Você acertou!");
                 break;
             } else {
