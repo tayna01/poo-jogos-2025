@@ -19,10 +19,5 @@ public class JogoDaDescobertaView {
         String resposta = scanner.nextLine();
         return resposta.equalsIgnoreCase("s");
     }
-
-    public String solicitarNomeUsuario() {
-        System.out.print("Digite seu nome: ");
-        return scanner.nextLine();
-    }
 }
 

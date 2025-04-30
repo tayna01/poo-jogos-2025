@@ -15,10 +15,10 @@ public class Main {
             System.out.println("1 - Jogo Caça-Palavras");
             System.out.println("2 - Jogo da Descoberta");
             System.out.print("Escolha o número do jogo: ");
-            String opcao = scanner.nextLine(); // Primeiro ler a opção
+            String opcao = scanner.nextLine();
 
             System.out.print("Digite seu nome: ");
-            String name = scanner.nextLine(); // Depois ler o nome
+            String name = scanner.nextLine();
             Usuario usuario = new Usuario(name);
 
             switch (opcao) {
@@ -37,7 +37,7 @@ public class Main {
 
             System.out.print("Deseja jogar novamente? (s/n): ");
             continuar = scanner.nextLine();
-        } while (!continuar.equalsIgnoreCase("n")); //Enquanto não digitar 'n', ele continua
+        } while (!continuar.equalsIgnoreCase("n"));
 
         scanner.close();
         System.out.println("Jogo finalizado. Até a próxima!");
