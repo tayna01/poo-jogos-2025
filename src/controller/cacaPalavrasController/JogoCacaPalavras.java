@@ -1,24 +1,23 @@
 package controller.cacaPalavrasController;
 
-import model.jogoCacaPalavras.Palavra;
-import model.jogoCacaPalavras.Tabuleiro;
-import model.jogoCacaPalavras.Usuario;
+import model.Palavra;
+import model.Tabuleiro;
+import model.Usuario;
 import view.jogoCacaPalavrasView.JogoCacaPalavrasView;
 
 import java.util.List;
 import java.util.Random;
 
-public class JogoCacaPalavrasController {
+public class JogoCacaPalavras {
     private Usuario usuario;
     private JogoCacaPalavrasView view;
     private Tabuleiro tabuleiro;
     private Palavra palavraEscolhida;
 
-    private List<String> bancoDePalavras = List.of("JAVA", "PROGRAMA", "CLASSE", "OBJETO", "ENCAPSULAMENTO", "HERANÇA", "FUNÇÃO");
 
-    public JogoCacaPalavrasController(Usuario usuario, JogoCacaPalavrasView view) {
+    public JogoCacaPalavras(Usuario usuario, JogoCacaPalavrasView view) {
         this.usuario = usuario;
-        this.view = view;
+        this.view = view; //inicia as coisas - fala do frank
     }
 
     public void iniciarJogo() {
@@ -44,6 +43,7 @@ public class JogoCacaPalavrasController {
 
     private String escolherPalavraAleatoria() {
         Random random = new Random();
-        return bancoDePalavras.get(random.nextInt(bancoDePalavras.size()));
+        List<String> banco = Palavra.getPalavradoBanco();
+        return banco.get(random.nextInt(banco.size())); //usa o numero como indice para pegar um elemento
     }
 }

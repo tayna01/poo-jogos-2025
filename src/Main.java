@@ -1,7 +1,6 @@
-import controller.cacaPalavrasController.JogoCacaPalavrasController;
-import controller.jogoDaDescoberta.JogoDaDescobertaController;
-import model.jogoCacaPalavras.Usuario;
-import model.jogoDaDescoberta.User;
+import controller.cacaPalavrasController.JogoCacaPalavras;
+import controller.jogoDaDescoberta.JogoDaDescoberta;
+import model.Usuario;
 import view.jogoCacaPalavrasView.JogoCacaPalavrasView;
 
 import java.util.Scanner;
@@ -16,22 +15,20 @@ public class Main {
             System.out.println("1 - Jogo Caça-Palavras");
             System.out.println("2 - Jogo da Descoberta");
             System.out.print("Escolha o número do jogo: ");
-            String opcao = scanner.nextLine();
+            String opcao = scanner.nextLine(); // Primeiro ler a opção
+
+            System.out.print("Digite seu nome: ");
+            String name = scanner.nextLine(); // Depois ler o nome
+            Usuario usuario = new Usuario(name);
 
             switch (opcao) {
                 case "1":
-                    System.out.print("Digite seu nome: ");
-                    String nome = scanner.nextLine();
-                    Usuario usuario = new Usuario(nome);
                     JogoCacaPalavrasView viewCaca = new JogoCacaPalavrasView();
-                    JogoCacaPalavrasController controllerCaca = new JogoCacaPalavrasController(usuario, viewCaca);
+                    JogoCacaPalavras controllerCaca = new JogoCacaPalavras(usuario, viewCaca);
                     controllerCaca.iniciarJogo();
                     break;
                 case "2":
-                    System.out.print("Digite seu nome: ");
-                    String name = scanner.nextLine();
-                    User user = new User(name);
-                    JogoDaDescobertaController controllerDescoberta = new JogoDaDescobertaController(user);
+                    JogoDaDescoberta controllerDescoberta = new JogoDaDescoberta(usuario);
                     controllerDescoberta.iniciarJogo();
                     break;
                 default:
@@ -40,7 +37,7 @@ public class Main {
 
             System.out.print("Deseja jogar novamente? (s/n): ");
             continuar = scanner.nextLine();
-        } while (!continuar.equalsIgnoreCase("n"));
+        } while (!continuar.equalsIgnoreCase("n")); //Enquanto não digitar 'n', ele continua
 
         scanner.close();
         System.out.println("Jogo finalizado. Até a próxima!");

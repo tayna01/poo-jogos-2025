@@ -16,6 +16,6 @@ public class JogoCacaPalavrasView {
 
     public boolean desejaDica() {
         System.out.print("Deseja uma dica? (s/n): ");
-        return scanner.nextLine().equalsIgnoreCase("s");
+        return scanner.nextLine().equalsIgnoreCase("s"); //retorna true ou false
     }
 }

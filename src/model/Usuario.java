@@ -1,4 +1,4 @@
-package model.jogoCacaPalavras;
+package model;
 
 public class Usuario {
     private String nome;

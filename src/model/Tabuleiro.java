@@ -1,4 +1,4 @@
-package model.jogoCacaPalavras;
+package model;
 
 import java.util.Random;
 
@@ -28,7 +28,7 @@ public class Tabuleiro {
         int coluna = random.nextInt(tamanho - texto.length());
 
         for (int i = 0; i < texto.length(); i++) {
-            matriz[linha][coluna + i] = texto.charAt(i);
+            matriz[linha][coluna + i] = texto.charAt(i); //Preenche da esquerda para direita
         }
     }
 

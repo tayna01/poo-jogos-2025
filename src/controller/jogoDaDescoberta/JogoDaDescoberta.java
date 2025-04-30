@@ -1,18 +1,17 @@
 package controller.jogoDaDescoberta;
 
-import model.jogoDaDescoberta.Palavra;
-import model.jogoDaDescoberta.User;
+import model.Palavra;
+import model.Usuario;
 import view.jogoDaDescobertaView.JogoDaDescobertaView;
 
 import java.util.List;
 import java.util.Random;
 
-public class JogoDaDescobertaController {
-    private List<String> bancoDePalavras = List.of("JAVA", "PROGRAMA", "CÓDIGO", "OBJETO", "FUNÇÃO", "MÉTODO");
+public class JogoDaDescoberta {
     private JogoDaDescobertaView view = new JogoDaDescobertaView();
-    private User usuario;
+    private Usuario usuario;
 
-    public JogoDaDescobertaController(User usuario) {
+    public JogoDaDescoberta(Usuario usuario) {
         this.usuario = usuario;
     }
 
@@ -47,6 +46,7 @@ public class JogoDaDescobertaController {
 
     private String escolherPalavra() {
         Random random = new Random();
-        return bancoDePalavras.get(random.nextInt(bancoDePalavras.size()));
+        List<String> banco = Palavra.getPalavradoBanco();
+        return banco.get(random.nextInt(banco.size()));
     }
 }
