@@ -6,8 +6,6 @@ import java.util.List;
 
 public class Palavra {
     private String texto;
-    private String textoOriginal;
-
 
     public Palavra(String texto) {
         this.texto = texto;
@@ -25,20 +23,18 @@ public class Palavra {
         return texto.charAt(texto.length() - 1);
     }
 
-    public String getTextoOriginal() {
-        return textoOriginal;
-    }
-
     public String embaralhar() {
         List<Character> letras = new ArrayList<>();
-        for (char c : textoOriginal.toCharArray()) {
+        for (char c : texto.toCharArray()) {
             letras.add(c);
         }
+        String embaralhada;
         do {
             Collections.shuffle(letras);
-        } while (textoOriginal.equals(getTextoEmbaralhado(letras)));
+            embaralhada = getTextoEmbaralhado(letras);
+        } while (texto.equals(embaralhada));
 
-        return getTextoEmbaralhado(letras);
+        return embaralhada;
     }
 
     private String getTextoEmbaralhado(List<Character> letras) {
@@ -50,12 +46,10 @@ public class Palavra {
     }
 
     public String getDica() {
-        return "Dica: começa com '" + textoOriginal.charAt(0) + "' e termina com '" + textoOriginal.charAt(textoOriginal.length() - 1) + "'";
+        return "Dica: começa com '" + texto.charAt(0) + "' e termina com '" + texto.charAt(texto.length() - 1) + "'";
     }
 
-
-    public static List<String> getPalavradoBanco(){
+    public static List<String> getPalavradoBanco() {
         return List.of("JAVA", "PROGRAMA", "CLASSE", "OBJETO", "ENCAPSULAMENTO", "HERANÇA", "FUNÇÃO");
     }
-
 }
