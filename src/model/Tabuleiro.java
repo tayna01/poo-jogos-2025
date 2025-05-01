@@ -36,6 +36,7 @@ public class Tabuleiro {
             for (int j = 0; j < tamanho; j++) {
                 System.out.print(matriz[i][j] + " ");
             }
+            System.out.println();
         }
     }
 }
