@@ -3,7 +3,7 @@ package view.jogoDaDescobertaView;
 import java.util.Scanner;
 
 public class JogoDaDescobertaView {
-    private Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public void mostrarMensagem(String mensagem) {
         System.out.println(mensagem);

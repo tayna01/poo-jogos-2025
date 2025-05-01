@@ -3,7 +3,7 @@ package view.jogoCacaPalavrasView;
 import java.util.Scanner;
 
 public class JogoCacaPalavrasView {
-    Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
     public String pedirPalpite() {
         System.out.print("Qual é a palavra escondida? ");
