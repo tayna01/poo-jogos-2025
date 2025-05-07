@@ -18,8 +18,8 @@ public class Main {
             String opcao = scanner.nextLine();
 
             System.out.print("Digite seu nome: ");
-            String name = scanner.nextLine();
-            Usuario usuario = new Usuario(name);
+            String nome = scanner.nextLine();
+            Usuario usuario = new Usuario(nome);
 
             switch (opcao) {
                 case "1":
