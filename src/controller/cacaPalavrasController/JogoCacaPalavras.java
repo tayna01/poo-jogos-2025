@@ -15,9 +15,9 @@ public class JogoCacaPalavras {
     private Palavra palavraEscolhida;
 
 
-    public JogoCacaPalavras(Usuario usuario, JogoCacaPalavrasView view) {
+    public JogoCacaPalavras(Usuario usuario) {
         this.usuario = usuario;
-        this.view = view; //inicia as coisas - fala do frank
+        this.view = new JogoCacaPalavrasView();
     }
 
     public void iniciarJogo() {

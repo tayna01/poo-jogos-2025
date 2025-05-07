@@ -1,7 +1,6 @@
 import controller.cacaPalavrasController.JogoCacaPalavras;
 import controller.jogoDaDescoberta.JogoDaDescoberta;
 import model.Usuario;
-import view.jogoCacaPalavrasView.JogoCacaPalavrasView;
 
 import java.util.Scanner;
 
@@ -23,8 +22,7 @@ public class Main {
 
             switch (opcao) {
                 case "1":
-                    JogoCacaPalavrasView viewCaca = new JogoCacaPalavrasView();
-                    JogoCacaPalavras controllerCaca = new JogoCacaPalavras(usuario, viewCaca);
+                    JogoCacaPalavras controllerCaca = new JogoCacaPalavras(usuario);
                     controllerCaca.iniciarJogo();
                     break;
                 case "2":
